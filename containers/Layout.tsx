@@ -17,11 +17,20 @@ const Layout = ({ children, title }) => {
       <main>{children}</main>
 
       <footer>
-        <Container maxWidth="sm" sx={{ bgcolor: "#1e2b31", color: "#fff" }}>
-          <Typography
-            sx={{ padding: "0.8rem", margin: "0.8rem 0 0 0" }}
-            textAlign="center"
-          >
+        <Container
+          sx={{
+            bgcolor: "#1e2b31",
+            color: "#fff",
+            width: "100%",
+            padding: "0.8rem",
+            margin: "0.8rem 0 0 0",
+          }}
+        >
+          <Typography textAlign="center" sx={{ margin: "0.3rem" }}>
+            Source code: https://github.com/KhoiUna/cis-juliette
+          </Typography>
+
+          <Typography textAlign="center" sx={{ margin: "0.3rem" }}>
             Made by Khoi Nguyen
           </Typography>
         </Container>
