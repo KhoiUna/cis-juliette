@@ -4,7 +4,7 @@ import Layout from "../containers/Layout";
 const Home: NextPage = () => {
   return (
     <Layout title={"UI Research"}>
-      <>home</>
+      <p>This project explores and compares design of a bad UI and a good UI</p>
     </Layout>
   );
 };

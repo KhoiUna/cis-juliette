@@ -1,7 +1,5 @@
 import Head from "next/head";
 import HeaderBar from "../components/ui/HeaderBar";
-import Container from "@mui/material/Container";
-import { Typography } from "@mui/material";
 
 const Layout = ({ children, title }) => {
   return (
@@ -10,30 +8,34 @@ const Layout = ({ children, title }) => {
         <title>Juliette | {title}</title>
       </Head>
 
-      <header>
-        <HeaderBar />
-      </header>
+      <HeaderBar />
 
-      <main>{children}</main>
+      <main>
+        <div className="bg-white">{children}</div>
+      </main>
 
-      <footer>
-        <Container
-          sx={{
-            bgcolor: "#1e2b31",
-            color: "#fff",
-            width: "100%",
-            padding: "0.8rem",
-            margin: "0.8rem 0 0 0",
-          }}
+      <footer className="bg-slate-700 text-slate-50 text-center px-3 py-3 mt-3">
+        <a
+          className="underline underline-offset-4"
+          href="https://github.com/KhoiUna/cis-juliette"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <Typography textAlign="center" sx={{ margin: "0.3rem" }}>
-            Source code: https://github.com/KhoiUna/cis-juliette
-          </Typography>
+          <p>Source code</p>
+        </a>
 
-          <Typography textAlign="center" sx={{ margin: "0.3rem" }}>
-            Made by Khoi Nguyen
-          </Typography>
-        </Container>
+        <p className="mt-4">
+          Made by{" "}
+          <a
+            href="https://bio.khoiuna.info"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="underline underline-offset-4 italic">
+              Khoi Nguyen
+            </span>
+          </a>
+        </p>
       </footer>
     </>
   );

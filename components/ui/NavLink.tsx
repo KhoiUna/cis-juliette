@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { NavLinkProps } from "../../types/types";
 
-const NavLink = ({ url, text }: { url: string; text: string }) => {
-  return <Link href={url.toLowerCase()}>{text}</Link>;
+const NavLink = ({ href, text }: NavLinkProps) => {
+  return (
+    <Link href={href.toLowerCase()} passHref>
+      <span className="cursor-pointer">{text}</span>
+    </Link>
+  );
 };
 
 export default NavLink;
