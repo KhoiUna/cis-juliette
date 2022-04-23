@@ -3,7 +3,7 @@ import Layout from "../containers/Layout";
 const Bad = () => {
   return (
     <Layout title={"Bad UI"}>
-      <>bad</>
+      <>Bad ui</>
     </Layout>
   );
 };

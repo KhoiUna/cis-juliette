@@ -10,11 +10,9 @@ const Layout = ({ children, title }) => {
 
       <HeaderBar />
 
-      <main>
-        <div className="bg-white">{children}</div>
-      </main>
+      <main className="bg-slate-50 py-3 h-[100vh]">{children}</main>
 
-      <footer className="bg-slate-700 text-slate-50 text-center px-3 py-3 mt-3">
+      <footer className="bg-slate-700 text-slate-50 text-center px-4 py-4 ">
         <a
           className="underline underline-offset-4"
           href="https://github.com/KhoiUna/cis-juliette"

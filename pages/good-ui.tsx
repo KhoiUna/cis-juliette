@@ -3,7 +3,7 @@ import Layout from "../containers/Layout";
 const Good = () => {
   return (
     <Layout title={"Good UI"}>
-      <>g</>
+      <>Good ui</>
     </Layout>
   );
 };
