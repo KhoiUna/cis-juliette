@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import QuoteBlock from "../components/QuoteBlock";
+import QuoteBlock from "../components/ui/QuoteBlock";
 import Card from "../components/ui/Card";
 import Layout from "../containers/Layout";
 

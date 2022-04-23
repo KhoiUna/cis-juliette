@@ -20,10 +20,10 @@ const Layout = ({ children, title }: LayoutProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p>Source code</p>
+          <p className="text-lg">Source code</p>
         </a>
 
-        <p className="mt-4">
+        <p className="mt-4 text-lg">
           Made by{" "}
           <a
             href="https://bio.khoiuna.info"

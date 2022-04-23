@@ -1,21 +1,20 @@
 import Image from "next/image";
-import QuoteBlock from "../components/QuoteBlock";
+import QuoteBlock from "../components/ui/QuoteBlock";
 import Card from "../components/ui/Card";
 import Layout from "../containers/Layout";
+import { NextPage } from "next";
 
-const Bad = () => {
+const Bad: NextPage = () => {
   return (
     <Layout title={"Bad UI"}>
-      <div className="flex flex-row flex-wrap">
-        <div>
-          <QuoteBlock>
-            <p className="text-xl italic text-left">
-              {'"'}Here are some images of the dropdown menu that may confuse
-              users.
-              {'"'}
-            </p>
-          </QuoteBlock>
-        </div>
+      <div className="flex justify-center flex-wrap">
+        <QuoteBlock>
+          <p className="text-xl italic text-left">
+            {'"'}Here are some images of the dropdown menu that may confuse
+            users.
+            {'"'}
+          </p>
+        </QuoteBlock>
 
         <Card>
           <div className="px-4 py-4 rounded-md">
