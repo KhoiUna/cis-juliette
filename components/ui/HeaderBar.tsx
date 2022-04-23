@@ -28,10 +28,16 @@ const MenuSidebar = ({ toggleMenu }) => {
             </svg>
           </button>
 
-          <p className="sm:hidden mx-5 my-5 text-lg underline underline-offset-4 decoration-slate-100">
+          <p
+            className="sm:hidden mx-5 my-5 text-lg underline underline-offset-4 decoration-slate-100"
+            onClick={() => toggleMenu()}
+          >
             <NavLink href={"/bad-ui"} text="Bad UI" />
           </p>
-          <p className="sm:hidden mx-5 text-lg underline underline-offset-4 decoration-slate-100">
+          <p
+            className="sm:hidden mx-5 text-lg underline underline-offset-4 decoration-slate-100"
+            onClick={() => toggleMenu()}
+          >
             <NavLink href={"/good-ui"} text="Good UI" />
           </p>
         </div>
@@ -45,8 +51,8 @@ const HeaderBar = () => {
   const toggleMenu = () => setMenuOpened(!menuOpened);
 
   return (
-    <header>
-      <nav className="drop-shadow-xl rounded-b-lg flex flex-row bg-slate-700 text-slate-50 py-3 px-3 items-baseline justify-between sm:justify-start">
+    <header className="sticky top-0 z-10 shadow-xl">
+      <nav className="rounded-b-lg flex flex-row bg-slate-700 text-slate-50 py-3 px-3 items-baseline justify-between sm:justify-start">
         <p className="text-3xl">
           <NavLink href={"/"} text="Juliette" />
         </p>

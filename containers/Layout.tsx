@@ -1,7 +1,8 @@
 import Head from "next/head";
 import HeaderBar from "../components/ui/HeaderBar";
+import { LayoutProps } from "../types/types";
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title }: LayoutProps) => {
   return (
     <>
       <Head>
@@ -10,9 +11,9 @@ const Layout = ({ children, title }) => {
 
       <HeaderBar />
 
-      <main className="bg-slate-50 py-3 h-[100vh]">{children}</main>
+      <main className="bg-slate-50 py-3 min-h-[100vh]">{children}</main>
 
-      <footer className="bg-slate-700 text-slate-50 text-center px-4 py-4 ">
+      <footer className="bg-slate-700 text-slate-50 text-center px-4 py-4 rounded-t-lg">
         <a
           className="underline underline-offset-4"
           href="https://github.com/KhoiUna/cis-juliette"
