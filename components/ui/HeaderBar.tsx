@@ -9,7 +9,7 @@ const MenuSidebar = ({ toggleMenu }) => {
         className="cursor-pointer sm:hidden absolute left-0 top-0 bg-black opacity-[0.2] w-[100vw] h-[100vh]"
       ></div>
 
-      <div className="drop-shadow-xl sm:hidden absolute top-0 right-0 bg-slate-700 h-[100vh] w-[50%]">
+      <div className="drop-shadow-xl sm:hidden absolute top-0 right-0 bg-slate-700 h-[100vh] w-[60%]">
         <div className="text-right">
           <button className="sm:hidden mx-5 my-5" onClick={() => toggleMenu()}>
             <svg
@@ -29,13 +29,13 @@ const MenuSidebar = ({ toggleMenu }) => {
           </button>
 
           <p
-            className="sm:hidden mx-5 my-5 text-lg underline underline-offset-4 decoration-slate-100"
+            className="sm:hidden mx-5 my-8 text-2xl underline underline-offset-4 decoration-slate-100"
             onClick={() => toggleMenu()}
           >
             <NavLink href={"/bad-ui"} text="Bad UI" />
           </p>
           <p
-            className="sm:hidden mx-5 text-lg underline underline-offset-4 decoration-slate-100"
+            className="sm:hidden mx-5 text-2xl underline underline-offset-4 decoration-slate-100"
             onClick={() => toggleMenu()}
           >
             <NavLink href={"/good-ui"} text="Good UI" />

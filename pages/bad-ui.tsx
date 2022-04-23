@@ -15,7 +15,9 @@ const Bad: NextPage = () => {
             {'"'}
           </p>
         </QuoteBlock>
+      </div>
 
+      <div className="flex justify-center">
         <Card>
           <div className="px-4 py-4 rounded-md">
             <div className="mb-3">

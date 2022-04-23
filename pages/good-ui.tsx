@@ -7,14 +7,16 @@ import Image from "next/image";
 const Good: NextPage = () => {
   return (
     <Layout title={"Good UI"}>
-      <div className="flex justify-center flex-wrap">
+      <div className="flex justify-center">
         <QuoteBlock>
           <p className="text-xl italic text-left">
             {'"'}This is the improved design of the dropdown menu.
             {'"'}
           </p>
         </QuoteBlock>
+      </div>
 
+      <div className="flex justify-center">
         <Card>
           <div className="px-4 py-4 rounded-md">
             <div className="mb-3">
