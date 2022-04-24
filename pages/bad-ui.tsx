@@ -10,45 +10,44 @@ const Bad: NextPage = () => {
       <div className="flex justify-center flex-wrap">
         <QuoteBlock>
           <p className="text-xl italic text-left">
-            {'"'}Here are some images of the dropdown menu that may confuse
-            users.
-            {'"'}
+            {'"'}Small UI details may give users a bad experience. For instance,
+            ...
           </p>
         </QuoteBlock>
       </div>
 
       <div className="flex justify-center">
         <Card>
-          <div className="px-4 py-4 rounded-md">
+          <div className="px-4 py-4 rounded-md w-[95vw]">
             <div className="mb-3">
               <p className="text-lg italic">
-                {'"'}Here are some images of the dropdown menu that may confuse
-                users.
-                {'"'}
+                This is the page for students to view their grades.
               </p>
-              <div className="my-4 shadow-lg">
+              <div className="my-4 text-center">
                 <Image
                   className="rounded-lg"
                   src={"/images/student_grades_page.jpg"}
-                  width={400}
-                  height={200}
+                  width={550}
+                  height={300}
                   alt="Student grades page"
                 />
               </div>
             </div>
 
-            <div className="mt-3">
+            <hr className="m-4" />
+
+            <div className="mt-7">
               <p className="text-lg italic">
-                {'"'}Here are some images of the dropdown menu that may confuse
-                users.
+                Here is the dropdown menu that may confuse users.
                 {'"'}
               </p>
-              <div className="my-4 shadow-lg">
+
+              <div className="my-4 text-center">
                 <Image
                   className="rounded-lg"
                   src={"/images/dropdown_menu.jpg"}
                   width={550}
-                  height={400}
+                  height={500}
                   alt="Dropdown menu"
                 />
               </div>
