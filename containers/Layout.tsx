@@ -11,7 +11,7 @@ const Layout = ({ children, title }: LayoutProps) => {
 
       <HeaderBar />
 
-      <main className="bg-slate-50 py-3 min-h-[100vh]">{children}</main>
+      <main className="bg-slate-50 py-3 min-h-[85vh]">{children}</main>
 
       <footer className="bg-slate-700 text-slate-50 text-center px-4 py-4 rounded-t-lg">
         <a

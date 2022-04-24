@@ -41,13 +41,8 @@ const Bad: NextPage = () => {
               <p className="text-lg italic">
                 Here is the dropdown menu that may confuse users. Users are
                 provided a long list of school semesters that they have to
-                scroll down. But there is a{" "}
-                <span className="underline underline-offset-3 text-blue-600 font-bold">
-                  <NavLink href={"/good-ui"} text={"better way"}></NavLink>
-                </span>
-                .
+                scroll down.
               </p>
-
               <div className="my-4 text-center">
                 <Image
                   className="rounded-lg"
@@ -56,7 +51,17 @@ const Bad: NextPage = () => {
                   height={500}
                   alt="Dropdown menu"
                 />
-              </div>
+              </div>{" "}
+              <p className="text-lg italic">
+                Note that users are also shown the school years that are way
+                before they have been admitted.
+                <br />
+                But there is a{" "}
+                <span className="underline underline-offset-3 text-blue-600 font-bold">
+                  <NavLink href={"/good-ui"} text={"better way"}></NavLink>
+                </span>
+                .{'"'}
+              </p>
             </div>
           </div>
         </Card>

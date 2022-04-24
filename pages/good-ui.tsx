@@ -2,16 +2,21 @@ import QuoteBlock from "../components/ui/QuoteBlock";
 import Card from "../components/ui/Card";
 import Layout from "../containers/Layout";
 import { NextPage } from "next";
-import Image from "next/image";
+import Dropdown from "../components/Dropdown";
+import YearInput from "../components/YearInput";
+import { useState } from "react";
 
 const Good: NextPage = () => {
+  const currentYear = new Date().getFullYear();
+  const [admissionYear, setAdmissionYear] = useState<number>(currentYear);
+  const handleChange = ({ target }) => setAdmissionYear(target.value);
+
   return (
     <Layout title={"Good UI"}>
       <div className="flex justify-center">
         <QuoteBlock>
           <p className="text-xl italic text-left">
             {'"'}This is the improved design of the dropdown menu.
-            {'"'}
           </p>
         </QuoteBlock>
       </div>
@@ -21,36 +26,29 @@ const Good: NextPage = () => {
           <div className="px-4 py-4 rounded-md">
             <div className="mb-3">
               <p className="text-lg italic">
-                {'"'}Here are some images of the dropdown menu that may confuse
-                users.
-                {'"'}
+                Users are shown with two input boxes. One for the school season
+                and one for the school year.
               </p>
-              <div className="my-4 shadow-lg">
-                <Image
-                  className="rounded-lg"
-                  src={"/images/student_grades_page.jpg"}
-                  width={400}
-                  height={200}
-                  alt="Student grades page"
-                />
-              </div>
             </div>
 
-            <div className="mt-3">
+            <div className="border-slate-100 border-2 rounded-md p-4 shadow-lg">
+              <div className="text-center">
+                <YearInput handleChangeAdmissionYear={handleChange} />
+              </div>
+
+              <div className="flex justify-between">
+                <Dropdown admissionYear={admissionYear} />
+              </div>
+            </div>
+          </div>
+
+          <div className="px-4 py-4 rounded-md">
+            <div className="mb-3">
               <p className="text-lg italic">
-                {'"'}Here are some images of the dropdown menu that may confuse
-                users.
+                Note that the input for the school year only lists till the
+                {" user's"} admission year. This makes the dropdown cleaner.
                 {'"'}
               </p>
-              <div className="my-4 shadow-lg">
-                <Image
-                  className="rounded-lg"
-                  src={"/images/dropdown_menu.jpg"}
-                  width={550}
-                  height={400}
-                  alt="Dropdown menu"
-                />
-              </div>
             </div>
           </div>
         </Card>

@@ -17,3 +17,11 @@ export interface CardProps {
 export interface QuoteBlockProps {
   children: ReactChild | ReactChild[];
 }
+
+export interface DropdownProps {
+  admissionYear: number;
+}
+
+export interface YearInputProps {
+  handleChangeAdmissionYear: ({ target }) => void;
+}
