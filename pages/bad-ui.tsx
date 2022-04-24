@@ -3,6 +3,7 @@ import QuoteBlock from "../components/ui/QuoteBlock";
 import Card from "../components/ui/Card";
 import Layout from "../containers/Layout";
 import { NextPage } from "next";
+import NavLink from "../components/ui/NavLink";
 
 const Bad: NextPage = () => {
   return (
@@ -38,8 +39,13 @@ const Bad: NextPage = () => {
 
             <div className="mt-7">
               <p className="text-lg italic">
-                Here is the dropdown menu that may confuse users.
-                {'"'}
+                Here is the dropdown menu that may confuse users. Users are
+                provided a long list of school semesters that they have to
+                scroll down. But there is a{" "}
+                <span className="underline underline-offset-3 text-blue-600 font-bold">
+                  <NavLink href={"/good-ui"} text={"better way"}></NavLink>
+                </span>
+                .
               </p>
 
               <div className="my-4 text-center">
