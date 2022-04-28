@@ -4,7 +4,7 @@ import { NavLinkProps } from "../../types/types";
 const NavLink = ({ href, text }: NavLinkProps) => {
   return (
     <Link href={href.toLowerCase()} passHref>
-      <p className="cursor-pointer inline">{text}</p>
+      <span className="cursor-pointer inline">{text}</span>
     </Link>
   );
 };
