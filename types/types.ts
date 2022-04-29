@@ -20,6 +20,7 @@ export interface QuoteBlockProps {
 
 export interface DropdownProps {
   admissionYear: number;
+  handleChangeSelect: () => void;
 }
 
 export interface YearInputProps {
@@ -28,5 +29,13 @@ export interface YearInputProps {
 
 export interface TextLoaderProps {
   loadingText: string;
+  speed: number;
+}
+
+export interface ConsoleProps {
+  actionArray: { field: string; value: string }[];
+}
+
+export interface BlinkCaretProps {
   speed: number;
 }
