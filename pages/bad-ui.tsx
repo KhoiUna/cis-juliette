@@ -54,10 +54,8 @@ const Bad: NextPage = () => {
               </div>{" "}
               <p className="text-lg italic">
                 Note that users are also shown the school years that are way
-                before they have been admitted.
-                <br />
-                But there is a{" "}
-                <span className="underline underline-offset-3 text-blue-600 font-bold">
+                before they have been admitted. But there is a{" "}
+                <span className="underline underline-offset-4 text-blue-600 font-bold">
                   <NavLink href={"/good-ui"} text={"better way"}></NavLink>
                 </span>
                 .{'"'}
