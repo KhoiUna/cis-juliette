@@ -25,3 +25,8 @@ export interface DropdownProps {
 export interface YearInputProps {
   handleChangeAdmissionYear: ({ target }) => void;
 }
+
+export interface TextLoaderProps {
+  loadingText: string;
+  speed: number;
+}
