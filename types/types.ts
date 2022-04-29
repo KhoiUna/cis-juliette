@@ -20,7 +20,7 @@ export interface QuoteBlockProps {
 
 export interface DropdownProps {
   admissionYear: number;
-  handleChangeSelect: () => void;
+  handleChangeSelect: ({ target }) => void;
 }
 
 export interface YearInputProps {

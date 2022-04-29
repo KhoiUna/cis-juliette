@@ -1,6 +1,6 @@
 import { DropdownProps } from "../types/types";
 
-const Dropdown = ({ admissionYear }: DropdownProps) => {
+const Dropdown = ({ admissionYear, handleChangeSelect }: DropdownProps) => {
   const currentYear = new Date().getFullYear();
   const yearDifference = currentYear - admissionYear;
   const yearArray = new Array(yearDifference + 1).fill(null);
@@ -11,6 +11,7 @@ const Dropdown = ({ admissionYear }: DropdownProps) => {
         className="border-2 border-black rounded-md p-3"
         name="season"
         id="season"
+        onChange={(e) => handleChangeSelect(e)}
       >
         <option value="Fall">Fall</option>
         <option value="Winter">Winter</option>
@@ -22,9 +23,10 @@ const Dropdown = ({ admissionYear }: DropdownProps) => {
         className="border-2 border-black rounded-md p-3"
         name="year"
         id="year"
+        onChange={(e) => handleChangeSelect(e)}
       >
         {yearArray.map((item, index) => (
-          <option key={index} value="Fall">
+          <option key={index} value={currentYear - index}>
             {currentYear - index}
           </option>
         ))}

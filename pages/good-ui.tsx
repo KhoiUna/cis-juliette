@@ -5,11 +5,23 @@ import { NextPage } from "next";
 import Dropdown from "../components/Dropdown";
 import YearInput from "../components/YearInput";
 import { useState } from "react";
+import Console from "../components/Console";
 
 const Good: NextPage = () => {
   const currentYear = new Date().getFullYear();
   const [admissionYear, setAdmissionYear] = useState<number>(currentYear);
   const handleChange = ({ target }) => setAdmissionYear(target.value);
+
+  const [actionArray, setActionArray] = useState([]);
+  const handleChangeSelect = ({ target }) => {
+    setActionArray((prev) => [
+      ...prev,
+      {
+        field: target.id,
+        value: target.value,
+      },
+    ]);
+  };
 
   return (
     <Layout title={"Good UI"}>
@@ -31,13 +43,20 @@ const Good: NextPage = () => {
               </p>
             </div>
 
-            <div className="border-slate-100 border-2 rounded-md p-4 shadow-lg">
+            <div className="border-slate-100 border-2 rounded-md p-4 shadow-lg mx-[14%] sm:mx-[30%]">
               <div className="text-center">
                 <YearInput handleChangeAdmissionYear={handleChange} />
               </div>
 
               <div className="flex justify-between">
-                <Dropdown admissionYear={admissionYear} />
+                <Dropdown
+                  admissionYear={admissionYear}
+                  handleChangeSelect={handleChangeSelect}
+                />
+              </div>
+
+              <div className="mt-4">
+                <Console actionArray={actionArray} />
               </div>
             </div>
           </div>
